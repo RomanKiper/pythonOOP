@@ -86,4 +86,8 @@ class Person:
         self.__passport = ps
 
 
-p = Person('Кипер Роман Михайлович', 38, '1234 567890', 120.1,)
+p = Person('Кипер Роман Михайлович', 38, '1234 567890', 84.5,)
+p.old = 39
+p.weight = 82.5
+p.passport = "4545 676767"
+print(p.__dict__)
