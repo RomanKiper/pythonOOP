@@ -18,3 +18,24 @@
 # res2 = c2(8)
 # print(res, res2)
 
+
+class StripChars:
+    def __init__(self, chars):
+        self.__counter = 0
+        self.__chars = chars
+
+    def __call__(self, *args, **kwargs):
+        if not isinstance(args[0], str):
+            raise TypeError('Аргумент должен быть строкой')
+
+        return args[0].strip(self.__chars)
+
+
+s1 = StripChars('?:!;.> ')
+s2 = StripChars(" ")
+res = s1("Python is the best language in the world>!!!")
+res2 = s2("hello world    !!")
+print(res, res2, sep="\n")
+
+
+
